@@ -33,3 +33,13 @@ function isUser(email) {
   }
   return false;
 }
+
+function registerAdmin(user) {
+  let userList = JSON.parse(localStorage.getItem("users")) || [];
+  userList.push(user);
+  localStorage.setItem("users", JSON.stringify(userList));
+}
+
+//comentar lo de abajo una vez usado
+let admin = new User("admin", "admin@admin.com", "admin", "admin");
+registerAdmin(admin);

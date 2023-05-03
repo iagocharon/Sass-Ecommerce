@@ -10,7 +10,8 @@ if (localStorage.getItem("currentUser")) {
   username.innerHTML = JSON.parse(localStorage.getItem("currentUser")).name;
   register.style.display = "none";
   login.style.display = "none";
-  if (!localStorage.getItem("currentUser").role === "admin") {
+  let current = JSON.parse(localStorage.getItem("currentUser"));
+  if (!(current.role === "admin")) {
     adminUsers.style.display = "none";
     adminProducts.style.display = "none";
   }

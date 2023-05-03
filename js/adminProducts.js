@@ -86,12 +86,10 @@ function editProduct(e) {
   } else {
     for (let i = 0; i < products.length; i++) {
       if (products[i].id === id) {
-        console.log("found");
         products[i].name = name.value;
         products[i].description = description.value;
         products[i].price = price.value;
         localStorage.setItem("products", JSON.stringify(products));
-        console.log(products);
         loadProducts(products);
         alert("Producto modificado correctamente.");
         break;

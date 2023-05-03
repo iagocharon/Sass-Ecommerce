@@ -1,5 +1,3 @@
-let products = JSON.parse(localStorage.getItem("products"));
-
 const productsContainer = document.getElementById("product-container");
 const mainTitle = document.getElementById("main-name");
 let addButtons = document.getElementsByClassName("add-product");
@@ -11,13 +9,16 @@ fetch("./js/productData.json")
   .then((response) => response.json())
   .then((data) => {
     products = data;
-    loadProducts(products);
+    if (localStorage.getItem("products") == null) {
+      localStorage.setItem("products", JSON.stringify(products));
+    }
   });
+
+let products = JSON.parse(localStorage.getItem("products"));
 
 loadProducts(products);
 
 function loadProducts(chosenProducts) {
-  console.log(chosenProducts);
   productsContainer.innerHTML = "";
 
   chosenProducts.forEach((product) => {
@@ -102,7 +103,6 @@ search.addEventListener("keyup", (e) => {
   products = JSON.parse(localStorage.getItem("products"));
   if (e.target.value != "") {
     products = products.filter((product) => {
-      console.log(product.name + " " + e.target.value);
       if (product.name.toLowerCase().includes(e.target.value.toLowerCase())) {
         return product;
       }

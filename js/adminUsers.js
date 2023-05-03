@@ -85,11 +85,9 @@ function editUser(e) {
   } else {
     for (let i = 0; i < users.length; i++) {
       if (users[i].email === email) {
-        console.log("found");
         users[i].name = name.value;
         users[i].role = role.value;
         localStorage.setItem("users", JSON.stringify(users));
-        console.log(users);
         loadUsers(users);
         let currentUser = JSON.parse(localStorage.getItem("currentUser"));
         if (currentUser.email === email) {
