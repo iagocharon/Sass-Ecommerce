@@ -7,12 +7,12 @@ const cartCounter = document.getElementById("cart-counter");
 
 //Descomentar esto para cargar los productos en el archivo productData.json por primera vez, despues descomentarlo ya que queda en localstorage.
 //PS: Es recomendado cargar imagenes cuadradas (mismo ancho que alto) para la mejor visualizacion de los productos.
-// fetch("./productData.json")
-//   .then((response) => response.json())
-//   .then((data) => {
-//     products = data;
-//     loadProducts(products);
-//   });
+fetch("./js/productData.json")
+  .then((response) => response.json())
+  .then((data) => {
+    products = data;
+    loadProducts(products);
+  });
 
 loadProducts(products);
 
