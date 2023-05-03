@@ -1,0 +1,68 @@
+.admin-products {
+  padding: 0 8%;
+  width: 100%;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      color: white;
+      margin-bottom: 20px;
+    }
+    input {
+      font-size: 1.5em;
+      align-self: center;
+    }
+  }
+  .table-wrapper {
+    background-color: white;
+    padding: 50px;
+    border-radius: 20px;
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 5px;
+      tr {
+        background-color: $color-bg-card;
+        border-radius: 10px;
+        overflow: hidden;
+        &.head {
+          background-color: white;
+        }
+        td,
+        th {
+          padding: 10px;
+          text-align: center;
+          &:first-child {
+            border-radius: 10px 0 0 10px;
+          }
+          &:last-child {
+            border-radius: 0 10px 10px 0;
+          }
+          input {
+            font-size: 1em;
+            text-align: center;
+            color: black;
+            border: none;
+            &.readonly {
+              background: none;
+              border: none;
+            }
+          }
+          button {
+            background: none;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            svg {
+              height: 1.3em;
+              margin: 0 5px;
+            }
+          }
+          img {
+            height: 80px;
+          }
+        }
+      }
+    }
+  }
+}

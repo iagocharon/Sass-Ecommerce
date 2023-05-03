@@ -1,0 +1,90 @@
+.cart {
+  padding: 0 8%;
+  width: 100%;
+  h1 {
+    color: white;
+    margin-bottom: 20px;
+  }
+  .cart-container {
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 50px;
+    .disabled {
+      display: none !important;
+    }
+    .cart-products {
+      display: flex;
+      flex-direction: column;
+      .cart-product {
+        width: 100%;
+        display: flex;
+        height: 100px;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $color-bg-card;
+        padding-left: 20px;
+        padding-right: 50px;
+        padding: 10px 50px 10px 20px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        .cart-product-image {
+          height: 100%;
+          border-radius: 10px;
+        }
+        .cart-product-delete {
+          background: none;
+          border: none;
+          cursor: pointer;
+          height: 1.5em;
+          svg {
+            height: 1.5em;
+          }
+        }
+      }
+    }
+    .cart-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      .cart-actions-left {
+        button {
+          font-weight: 600;
+          border: none;
+          outline: none;
+          background: $color-bg-primary;
+          text-transform: uppercase;
+          padding: 20px;
+          border-radius: 20px;
+          font-size: 1em;
+          cursor: pointer;
+        }
+      }
+      .cart-actions-right {
+        display: flex;
+        align-items: center;
+        .cart-actions-total {
+          font-weight: 600;
+          display: flex;
+          gap: 10px;
+          background-color: $color-bg-card;
+          padding: 20px;
+          border-radius: 20px 0 0 20px;
+          font-size: 1em;
+        }
+        .cart-actions-buy {
+          border: none;
+          font-weight: 600;
+          outline: none;
+          background: $color-bg-primary;
+          text-transform: uppercase;
+          padding: 20px;
+          border-radius: 0 20px 20px 0;
+          font-size: 1em;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

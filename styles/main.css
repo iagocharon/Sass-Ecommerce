@@ -1,0 +1,496 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: rgb(31, 32, 35);
+  background-repeat: no-repeat;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+}
+
+header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(35, 35, 35);
+  padding: 0 8%;
+  color: white;
+}
+header nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header nav .logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+header nav .logo img {
+  height: 70%;
+}
+header nav .nav {
+  display: flex;
+  gap: 20px;
+  text-transform: uppercase;
+}
+header .user-menu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+header .user-menu ul {
+  display: flex;
+  gap: 20px;
+  text-transform: uppercase;
+}
+header .user-menu ul li {
+  cursor: pointer;
+}
+header .user-menu ul li#user-name {
+  cursor: default;
+}
+header .user-menu ul #cart a {
+  position: relative;
+}
+header .user-menu ul #cart a svg {
+  height: 1.2em;
+}
+header .user-menu ul #cart a #cart-counter {
+  background-color: gold;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.home {
+  padding: 0 8%;
+  width: 100%;
+}
+.home .top {
+  display: flex;
+  justify-content: space-between;
+}
+.home .top h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+.home .top input {
+  font-size: 1.5em;
+  align-self: center;
+}
+.home .product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.home .product-container .product {
+  width: 300px;
+  background-color: rgb(230, 234, 238);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.home .product-container .product img {
+  height: 300px;
+}
+.home .product-container .product .product-details {
+  padding: 20px;
+}
+.home .product-container .product .product-details h3 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+.home .product-container .product .product-details p {
+  margin-bottom: 10px;
+}
+.home .product-container .product .product-details .bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.home .product-container .product .product-details .bottom-wrapper .product-price {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.home .product-container .product .product-details .bottom-wrapper .add-product {
+  background-color: gold;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.home .product-container .product .product-details .bottom-wrapper .add-product:hover {
+  background-color: #ccac00;
+}
+
+.register,
+.login {
+  width: 500px;
+  margin: auto;
+  color: white;
+  background-color: #333;
+  border-radius: 10px;
+}
+.register .toggle,
+.login .toggle {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  border-bottom: solid 1px gold;
+}
+.register .toggle p,
+.register .toggle a,
+.login .toggle p,
+.login .toggle a {
+  width: 50%;
+  text-align: center;
+}
+.register .toggle p,
+.login .toggle p {
+  color: gold;
+}
+.register form,
+.login form {
+  padding: 20px 30px;
+}
+.register form .form-group,
+.login form .form-group {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+.register form .form-group #password,
+.login form .form-group #password {
+  font-size: 1.3em;
+  letter-spacing: 0.2em;
+}
+.register form .form-group input,
+.login form .form-group input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid gold;
+  border-radius: 0;
+  outline: none;
+  padding: 0 10px;
+  font-size: 16px;
+  position: relative;
+  z-index: 2;
+  background: none;
+  color: white;
+}
+.register form .form-group label,
+.login form .form-group label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  opacity: 0.6;
+  transition: all 200ms ease-in-out;
+  z-index: 1;
+}
+.register form .form-group.active label,
+.login form .form-group.active label {
+  top: 0;
+  font-size: 12px;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+.register form .login-button,
+.login form .login-button {
+  margin-top: 40px;
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: gold;
+  border: solid 1px gold;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.register form .login-button:hover,
+.login form .login-button:hover {
+  background-color: rgb(35, 35, 35);
+  color: white;
+}
+
+.cart {
+  padding: 0 8%;
+  width: 100%;
+}
+.cart h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+.cart .cart-container {
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 50px;
+}
+.cart .cart-container .disabled {
+  display: none !important;
+}
+.cart .cart-container .cart-products {
+  display: flex;
+  flex-direction: column;
+}
+.cart .cart-container .cart-products .cart-product {
+  width: 100%;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e6eaee;
+  padding-left: 20px;
+  padding-right: 50px;
+  padding: 10px 50px 10px 20px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.cart .cart-container .cart-products .cart-product .cart-product-image {
+  height: 100%;
+  border-radius: 10px;
+}
+.cart .cart-container .cart-products .cart-product .cart-product-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 1.5em;
+}
+.cart .cart-container .cart-products .cart-product .cart-product-delete svg {
+  height: 1.5em;
+}
+.cart .cart-container .cart-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.cart .cart-container .cart-actions .cart-actions-left button {
+  font-weight: 600;
+  border: none;
+  outline: none;
+  background: gold;
+  text-transform: uppercase;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+.cart .cart-container .cart-actions .cart-actions-right {
+  display: flex;
+  align-items: center;
+}
+.cart .cart-container .cart-actions .cart-actions-right .cart-actions-total {
+  font-weight: 600;
+  display: flex;
+  gap: 10px;
+  background-color: #e6eaee;
+  padding: 20px;
+  border-radius: 20px 0 0 20px;
+  font-size: 1em;
+}
+.cart .cart-container .cart-actions .cart-actions-right .cart-actions-buy {
+  border: none;
+  font-weight: 600;
+  outline: none;
+  background: gold;
+  text-transform: uppercase;
+  padding: 20px;
+  border-radius: 0 20px 20px 0;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.admin-users {
+  padding: 0 8%;
+  width: 100%;
+}
+.admin-users .top {
+  display: flex;
+  justify-content: space-between;
+}
+.admin-users .top h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+.admin-users .top input {
+  font-size: 1.5em;
+  align-self: center;
+}
+.admin-users .table-wrapper {
+  background-color: white;
+  padding: 50px;
+  border-radius: 20px;
+}
+.admin-users .table-wrapper table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+.admin-users .table-wrapper table tr {
+  background-color: #e6eaee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.admin-users .table-wrapper table tr.head {
+  background-color: white;
+}
+.admin-users .table-wrapper table tr td,
+.admin-users .table-wrapper table tr th {
+  padding: 10px;
+  text-align: center;
+}
+.admin-users .table-wrapper table tr td:first-child,
+.admin-users .table-wrapper table tr th:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.admin-users .table-wrapper table tr td:last-child,
+.admin-users .table-wrapper table tr th:last-child {
+  border-radius: 0 10px 10px 0;
+}
+.admin-users .table-wrapper table tr td input,
+.admin-users .table-wrapper table tr th input {
+  font-size: 1em;
+  text-align: center;
+  color: black;
+  border: none;
+}
+.admin-users .table-wrapper table tr td input.readonly,
+.admin-users .table-wrapper table tr th input.readonly {
+  background: none;
+  border: none;
+}
+.admin-users .table-wrapper table tr td button,
+.admin-users .table-wrapper table tr th button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.admin-users .table-wrapper table tr td button svg,
+.admin-users .table-wrapper table tr th button svg {
+  height: 1.3em;
+  margin: 0 5px;
+}
+
+.admin-products {
+  padding: 0 8%;
+  width: 100%;
+}
+.admin-products .top {
+  display: flex;
+  justify-content: space-between;
+}
+.admin-products .top h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+.admin-products .top input {
+  font-size: 1.5em;
+  align-self: center;
+}
+.admin-products .table-wrapper {
+  background-color: white;
+  padding: 50px;
+  border-radius: 20px;
+}
+.admin-products .table-wrapper table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+.admin-products .table-wrapper table tr {
+  background-color: #e6eaee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.admin-products .table-wrapper table tr.head {
+  background-color: white;
+}
+.admin-products .table-wrapper table tr td,
+.admin-products .table-wrapper table tr th {
+  padding: 10px;
+  text-align: center;
+}
+.admin-products .table-wrapper table tr td:first-child,
+.admin-products .table-wrapper table tr th:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.admin-products .table-wrapper table tr td:last-child,
+.admin-products .table-wrapper table tr th:last-child {
+  border-radius: 0 10px 10px 0;
+}
+.admin-products .table-wrapper table tr td input,
+.admin-products .table-wrapper table tr th input {
+  font-size: 1em;
+  text-align: center;
+  color: black;
+  border: none;
+}
+.admin-products .table-wrapper table tr td input.readonly,
+.admin-products .table-wrapper table tr th input.readonly {
+  background: none;
+  border: none;
+}
+.admin-products .table-wrapper table tr td button,
+.admin-products .table-wrapper table tr th button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.admin-products .table-wrapper table tr td button svg,
+.admin-products .table-wrapper table tr th button svg {
+  height: 1.3em;
+  margin: 0 5px;
+}
+.admin-products .table-wrapper table tr td img,
+.admin-products .table-wrapper table tr th img {
+  height: 80px;
+}/*# sourceMappingURL=main.css.map */

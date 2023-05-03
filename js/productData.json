@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Remera manga larga Heat",
+    "image": "/assets/images/manga-larga-negra.jpg",
+    "description": "Deportes recomendados: Fútbol,Running <br>Género: Hombre<br>Material: Poliéster<br>Tipo de cuello: Redondo<br>Confeccionada en poliester con elastano.",
+    "price": "3219"
+  },
+  {
+    "id": 2,
+    "name": "Pechera pro selection",
+    "image": "/assets/images/remera-musculosa-negra.jpg",
+    "description": "Género: Hombre<br>Material: Poliéster<br>Tipo de cuello: Redondo<br>Remera Deportiva Sublimable - Excelente calce y confección.<br>Material: Set de Poliéster de primera calidad.",
+    "price": "1215"
+  },
+  {
+    "id": 3,
+    "name": "Short pro elite",
+    "image": "/assets/images/short-gris.jpg",
+    "description": "Sirven para toda disciplina deportiva. entranamiento funcional, running, ciclismo, futbol, basquet, voley y mucho mas. <br>Género: Hombre <br>Composición: Poliéster.",
+    "price": "5250"
+  },
+  {
+    "id": 4,
+    "name": "Short pro elite",
+    "image": "/assets/images/short-negro.jpg",
+    "description": "Sirven para toda disciplina deportiva. entranamiento funcional, running, ciclismo, futbol, basquet, voley y mucho mas. <br>Género: Hombre <br>Composición: Poliéster",
+    "price": "5250"
+  }
+]

@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: rgb(31 32 35);
+  background-repeat: no-repeat;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 100px;
+}
